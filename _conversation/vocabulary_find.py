@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 class VocabularyFind(APIView):
     def get(self, request):
         find_1 = [
-            {
+                    {
                 "en": "that",
                 "uz": "u, ana u (uzoqda)",
                 "index": 0
@@ -27,6 +27,7 @@ class VocabularyFind(APIView):
                 "index": 1
             },
         ],
+       
         data = [
             find_1,
             find_2,
