@@ -1,19 +1,19 @@
 from django.urls import path
-from _conversation.vocabulary_find import VocabularyFind
-from _conversation.vocabulary_full import VocabularyFull
-from _conversation.vocabulary_line import VocabularyLine
-from _conversation.vocabulary_test import VocabularyTest
 from _stories.stories import Stories
 from _stories.story_test import StoryTest
 from _stories.vocabulary import Vocabulary
+from _stories.vocabulary_test import VocabularyTest
+from _stories.vocabulary_full import VocabularyFull
+from _stories.vocabulary_line import VocabularyLine
+from _stories.vocabulary_find import VocabularyFind
 
 urlpatterns = [
     # STORIES
-    path('stories/', Stories.as_view()),
-    path('storytest/', StoryTest.as_view()),
+    path('', Stories.as_view()),
+    path('test/', StoryTest.as_view()),
     path('vocabulary/', Vocabulary.as_view()),
-    path('VocabularyTest/', VocabularyTest.as_view()),
-    path('storiesfull/', VocabularyFull.as_view()),
-    path('storiesline/', VocabularyLine.as_view()),
-    path('storiesfind/', VocabularyFind.as_view()),
+    path('vocabularyTest/', VocabularyTest.as_view()),
+    path('vocabularyfull/', VocabularyFull.as_view()),
+    path('vocabularyline/', VocabularyLine.as_view()),
+    path('vocabularyfind/', VocabularyFind.as_view()),
 ]

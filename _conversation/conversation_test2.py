@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
     
-class conversationTest2(APIView):
+class ConversationTest2(APIView):
     def get(self, request):
         test_1 = [
              {
